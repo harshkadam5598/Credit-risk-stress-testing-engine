@@ -1,0 +1,11 @@
+model_id,dataset,bin,n_loans,n_defaults,mean_pred_pd,observed_rate,ci_lower,ci_upper,n_valid_resamples,interval_status
+logistic,test,1,750,2,0.00380061,0.00266667,0,0.00701287,1000,reported
+logistic,test,2,750,7,0.0108397,0.00933333,0.00273551,0.0166688,1000,reported
+logistic,test,3,750,29,0.022568,0.0386667,0.0252025,0.0529172,1000,reported
+logistic,test,4,750,23,0.0492217,0.0306667,0.0188883,0.0432036,1000,reported
+logistic,test,5,750,167,0.232871,0.222667,0.190741,0.252542,1000,reported
+gradient_boosting,test,1,750,5,0.00481444,0.00666667,0.00137473,0.0126404,1000,reported
+gradient_boosting,test,2,750,17,0.0119514,0.0226667,0.0126418,0.0339231,1000,reported
+gradient_boosting,test,3,750,23,0.0222312,0.0306667,0.0189616,0.0422182,1000,reported
+gradient_boosting,test,4,750,22,0.0449666,0.0293333,0.0180877,0.0423508,1000,reported
+gradient_boosting,test,5,750,161,0.222974,0.214667,0.183562,0.245237,1000,reported

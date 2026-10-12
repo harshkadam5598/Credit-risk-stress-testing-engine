@@ -1,0 +1,13 @@
+model_id,segment_type,segment_value,n_loans,n_defaults,mean_pd,observed_rate,auc,ci_lower,ci_upper,n_valid_resamples,interval_status
+logistic,origination_year,2020,262,17,0.0593276,0.0648855,,,,,insufficient_data
+logistic,origination_year,2021,509,29,0.0593688,0.0569745,,,,,insufficient_data
+logistic,origination_year,2022,1244,64,0.0598323,0.0514469,0.900794,0.85708,0.940197,1000,reported
+logistic,origination_year,2023,1735,118,0.0687502,0.0680115,0.861965,0.826289,0.896438,1000,reported
+logistic,loan_purpose,car_purchase,796,67,0.0766579,0.0841709,,,,,insufficient_data
+logistic,loan_purpose,debt_consolidation,1117,70,0.0644495,0.0626679,0.854619,0.798058,0.902964,1000,reported
+logistic,loan_purpose,home_improvement,763,43,0.0763117,0.0563565,,,,,insufficient_data
+logistic,term_months,36,1321,78,0.0654801,0.0590462,0.918601,0.883724,0.946623,1000,reported
+logistic,term_months,60,1095,72,0.05977,0.0657534,0.820503,0.758519,0.873816,1000,reported
+logistic,employment_status,Employed_FT,2579,133,0.0564624,0.0515704,0.856171,0.819087,0.888959,1000,reported
+logistic,income_band,20-30k,1219,99,0.0745531,0.0812141,0.848999,0.804499,0.889293,1000,reported
+logistic,income_band,30-45k,1086,48,0.0516814,0.0441989,0.842044,0.77684,0.902368,1000,reported

@@ -1,0 +1,22 @@
+scenario_id,scenario_name,scenario_type,driver,shock_type,shock_value,description
+baseline,Baseline,baseline_reference,annual_income,relative_change,0.0,"Reference: the portfolio exactly as at T0, scored by the unchanged model."
+baseline,Baseline,baseline_reference,existing_debt,relative_change,0.0,"Reference: the portfolio exactly as at T0, scored by the unchanged model."
+baseline,Baseline,baseline_reference,credit_score,held_constant,0.0,"Not shocked: a bureau score already reflects income and debt behaviour, so shocking it too would double count (likely understates stress)."
+baseline,Baseline,baseline_reference,employment_status_and_tenure,held_constant,0.0,"Not changed: avoids a second, unmodelled unemployment mechanism."
+baseline,Baseline,baseline_reference,loan_terms_and_interest_rate,held_constant,0.0,Not changed: loans are fixed-rate and fixed-term.
+baseline,Baseline,baseline_reference,ead,held_constant,0.0,Held at the T0 outstanding balance in every scenario.
+baseline,Baseline,baseline_reference,lgd,held_constant,0.0,Held at the configured flat LGD in every scenario.
+adverse,Adverse,hypothetical_stress,annual_income,relative_change,-0.05,"Hypothetical moderate squeeze on household finances: income down 5%, existing debt up 10%."
+adverse,Adverse,hypothetical_stress,existing_debt,relative_change,0.1,"Hypothetical moderate squeeze on household finances: income down 5%, existing debt up 10%."
+adverse,Adverse,hypothetical_stress,credit_score,held_constant,0.0,"Not shocked: a bureau score already reflects income and debt behaviour, so shocking it too would double count (likely understates stress)."
+adverse,Adverse,hypothetical_stress,employment_status_and_tenure,held_constant,0.0,"Not changed: avoids a second, unmodelled unemployment mechanism."
+adverse,Adverse,hypothetical_stress,loan_terms_and_interest_rate,held_constant,0.0,Not changed: loans are fixed-rate and fixed-term.
+adverse,Adverse,hypothetical_stress,ead,held_constant,0.0,Held at the T0 outstanding balance in every scenario.
+adverse,Adverse,hypothetical_stress,lgd,held_constant,0.0,Held at the configured flat LGD in every scenario.
+severe_adverse,Severe adverse,hypothetical_stress,annual_income,relative_change,-0.12,"Hypothetical strong squeeze on income and borrowing burden: income down 12%, existing debt up 25%."
+severe_adverse,Severe adverse,hypothetical_stress,existing_debt,relative_change,0.25,"Hypothetical strong squeeze on income and borrowing burden: income down 12%, existing debt up 25%."
+severe_adverse,Severe adverse,hypothetical_stress,credit_score,held_constant,0.0,"Not shocked: a bureau score already reflects income and debt behaviour, so shocking it too would double count (likely understates stress)."
+severe_adverse,Severe adverse,hypothetical_stress,employment_status_and_tenure,held_constant,0.0,"Not changed: avoids a second, unmodelled unemployment mechanism."
+severe_adverse,Severe adverse,hypothetical_stress,loan_terms_and_interest_rate,held_constant,0.0,Not changed: loans are fixed-rate and fixed-term.
+severe_adverse,Severe adverse,hypothetical_stress,ead,held_constant,0.0,Held at the T0 outstanding balance in every scenario.
+severe_adverse,Severe adverse,hypothetical_stress,lgd,held_constant,0.0,Held at the configured flat LGD in every scenario.

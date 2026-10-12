@@ -1,0 +1,27 @@
+section,item,model,value,threshold,met
+fold_log_loss,fold 1,logistic,0.16625853493008544,,
+fold_roc_auc,fold 1,logistic,0.8545673118443007,,
+fold_log_loss,fold 2,logistic,0.1668640240738212,,
+fold_roc_auc,fold 2,logistic,0.8503603428126217,,
+fold_log_loss,fold 3,logistic,0.1756584929526839,,
+fold_roc_auc,fold 3,logistic,0.8265240205747527,,
+fold_log_loss,fold 4,logistic,0.16599784025535852,,
+fold_roc_auc,fold 4,logistic,0.8434854100959994,,
+fold_log_loss,fold 5,logistic,0.17665491346232126,,
+fold_roc_auc,fold 5,logistic,0.8327075006649832,,
+fold_log_loss,fold 1,gradient_boosting,0.16969162431657786,,
+fold_roc_auc,fold 1,gradient_boosting,0.8413574638750039,,
+fold_log_loss,fold 2,gradient_boosting,0.1747336937797858,,
+fold_roc_auc,fold 2,gradient_boosting,0.840530914352496,,
+fold_log_loss,fold 3,gradient_boosting,0.1814250471678804,,
+fold_roc_auc,fold 3,gradient_boosting,0.8138288868699499,,
+fold_log_loss,fold 4,gradient_boosting,0.169492549054963,,
+fold_roc_auc,fold 4,gradient_boosting,0.8382173614157752,,
+fold_log_loss,fold 5,gradient_boosting,0.17871618632259895,,
+fold_roc_auc,fold 5,gradient_boosting,0.8292254068488087,,
+criterion,C1: folds where challenger log loss is better (of 5),gradient_boosting vs logistic,0.0,4.0,False
+criterion,C2: mean log-loss improvement / baseline mean log loss,gradient_boosting vs logistic,-0.02657316965423775,0.01,False
+criterion,A1: challenger minus baseline mean fold AUC,gradient_boosting vs logistic,-0.008896910526124957,-0.005,False
+criterion,K1: increase in |calibration slope - 1| (challenger minus baseline),gradient_boosting vs logistic,0.07979777114902564,0.1,True
+criterion,K2: increase in |mean PD / observed rate - 1| (challenger minus baseline),gradient_boosting vs logistic,0.005340741934879767,0.05,True
+decision,"challenger eligible (all of C1, C2, A1, K1, K2 met)",gradient_boosting,0.0,,False

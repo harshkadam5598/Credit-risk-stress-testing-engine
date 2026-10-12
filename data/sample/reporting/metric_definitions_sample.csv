@@ -1,0 +1,18 @@
+metric,definition,direction
+roc_auc,Probability a random defaulter is ranked above a random non-defaulter,higher is better
+gini,2 x ROC-AUC - 1,higher is better
+pr_auc,Average precision: ranking quality among the rare defaults (depends on prevalence),higher is better
+ks,Maximum gap between the score distributions of defaulters and non-defaulters,higher is better
+brier,Mean squared error of predicted PD against the 0/1 outcome,lower is better
+brier_skill,1 - Brier / Brier of always predicting the observed default rate,higher is better
+log_loss,Average negative log-likelihood of the outcomes; penalises confident errors,lower is better
+mean_pred_pd,Average predicted PD,compare with observed_rate
+observed_rate,Observed default rate,reference
+calibration_ratio,Mean predicted PD / observed default rate (calibration-in-the-large),1.0 is ideal
+calibration_slope,Slope of a logistic regression of outcomes on logit(predicted PD),1.0 is ideal; below 1 means predictions too extreme
+calibration_intercept,Intercept of the same regression,0.0 is ideal
+capture_top10,Share of all defaults found in the riskiest 10% of loans,higher is better
+capture_top20,Share of all defaults found in the riskiest 20% of loans,higher is better
+auc_difference,Challenger AUC minus baseline AUC on shared resamples,positive favours the challenger
+brier_difference,Challenger Brier minus baseline Brier on shared resamples,negative favours the challenger
+log_loss_difference,Challenger log loss minus baseline log loss on shared resamples,negative favours the challenger

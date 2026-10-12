@@ -1,0 +1,32 @@
+section,item,value,n,note
+univariate_auc,age,0.4343,11250,"above 0.5 means higher value, higher default rate"
+skewness,age,0.198,11250,
+univariate_auc,log_annual_income,0.3783,11250,"above 0.5 means higher value, higher default rate"
+skewness,log_annual_income,0.231,11250,
+univariate_auc,employment_tenure_months,0.4252,11032,"above 0.5 means higher value, higher default rate"
+skewness,employment_tenure_months,1.45,11032,
+univariate_auc,credit_score,0.2128,11082,"above 0.5 means higher value, higher default rate"
+skewness,credit_score,0.041,11082,
+univariate_auc,existing_debt,0.6051,11250,"above 0.5 means higher value, higher default rate"
+skewness,existing_debt,3.781,11250,
+univariate_auc,loan_amount,0.6201,11250,"above 0.5 means higher value, higher default rate"
+skewness,loan_amount,1.449,11250,
+univariate_auc,term_months,0.4682,11250,"above 0.5 means higher value, higher default rate"
+skewness,term_months,-0.033,11250,
+univariate_auc,interest_rate,0.7616,11250,"above 0.5 means higher value, higher default rate"
+skewness,interest_rate,0.028,11250,
+univariate_auc,loan_to_income,0.7018,11250,"above 0.5 means higher value, higher default rate"
+skewness,loan_to_income,1.233,11250,
+univariate_auc,debt_to_income,0.6455,11250,"above 0.5 means higher value, higher default rate"
+skewness,debt_to_income,2.195,11250,
+univariate_auc,instalment_to_income,0.7146,11250,"above 0.5 means higher value, higher default rate"
+skewness,instalment_to_income,1.662,11250,
+univariate_auc,months_on_book,0.4927,11250,"above 0.5 means higher value, higher default rate"
+skewness,months_on_book,0.83,11250,
+univariate_auc,customer_active_loans,0.5012,11250,"above 0.5 means higher value, higher default rate"
+skewness,customer_active_loans,0.345,11250,
+high_correlation,credit_score ~ interest_rate,-0.886,11250,|Spearman| >= 0.8
+high_correlation,existing_debt ~ debt_to_income,0.948,11250,|Spearman| >= 0.8
+high_correlation,loan_to_income ~ instalment_to_income,0.912,11250,|Spearman| >= 0.8
+default_rate_when_missing,credit_score,0.0417,168,observed-value default rate 0.0611
+default_rate_when_missing,employment_tenure_months,0.0367,218,observed-value default rate 0.0613

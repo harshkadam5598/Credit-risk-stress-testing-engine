@@ -1,0 +1,101 @@
+customer_id,age,annual_income,employment_status,employment_tenure_months,credit_score,existing_debt,region
+C00001,28,22597.93,Employed_FT,21,639,3360,North West
+C00002,47,44735.39,Self_employed,,684,5460,South West
+C00003,48,22806.9,Self_employed,21,646,2830,Scotland
+C00004,55,57437.13,Employed_FT,172,651,6030,North East
+C00005,37,32627.4,Employed_FT,135,660,7780,East of England
+C00006,19,18267.51,Employed_PT,12,658,1070,North East
+C00007,36,32822.25,Employed_FT,106,675,2290,Scotland
+C00008,56,61573.64,Employed_FT,33,733,4180,London
+C00009,50,51793.6,Employed_FT,87,682,0,Scotland
+C00010,41,24787.79,Employed_FT,46,678,5670,Scotland
+C00011,27,26523.26,Employed_FT,101,597,2620,Wales
+C00012,36,30070.7,Employed_FT,38,564,2800,Wales
+C00013,54,67935.21,Employed_FT,30,598,0,South East
+C00014,59,20153.05,Employed_PT,279,648,10410,Scotland
+C00015,30,32073.01,Employed_FT,138,734,3310,East of England
+C00016,34,46063.45,Employed_FT,42,566,0,East of England
+C00017,48,13587.5,Self_employed,6,524,8130,South East
+C00018,51,27359.88,Employed_FT,64,753,4320,South West
+C00019,57,37693.7,Employed_FT,29,696,11720,East of England
+C00020,53,14446.96,Employed_PT,175,639,2530,West Midlands
+C00021,27,20936.9,Employed_FT,54,608,1830,North West
+C00022,33,29967.02,Employed_FT,178,729,14380,East Midlands
+C00023,41,23869.37,Employed_FT,92,516,35800,South East
+C00024,53,37599.3,Employed_FT,24,662,1220,South West
+C00025,33,27953.65,Self_employed,68,574,2030,South West
+C00026,65,23056.84,Employed_PT,32,615,0,South West
+C00027,43,19253.41,Employed_FT,75,671,0,London
+C00028,56,25631.82,Employed_PT,15,669,4120,North East
+C00029,56,33798.68,Employed_FT,142,729,11930,East of England
+C00030,38,44201.55,Employed_FT,,676,24490,North East
+C00031,48,28922.14,Employed_PT,128,585,8080,Scotland
+C00032,41,18623.62,Employed_FT,15,627,5480,West Midlands
+C00033,35,31983.78,Employed_PT,14,586,3320,West Midlands
+C00034,41,21433.35,Employed_FT,14,635,2960,South West
+C00035,56,58797.25,Employed_FT,62,645,0,Wales
+C00036,36,22759.79,Employed_FT,6,586,4260,South West
+C00037,44,29228.43,Employed_FT,52,650,13780,North West
+C00038,55,25332.27,Employed_FT,100,670,9800,West Midlands
+C00039,58,36735.9,Employed_FT,65,708,1500,North West
+C00040,60,21630.72,Retired,0,707,9280,West Midlands
+C00041,54,61726.03,Employed_FT,76,687,0,East of England
+C00042,21,37254.19,Employed_FT,26,649,3730,Scotland
+C00043,55,60160.26,Employed_FT,148,614,22090,Scotland
+C00044,56,50850.9,Employed_FT,7,605,14750,South East
+C00045,56,14623.24,Employed_PT,106,562,0,Wales
+C00046,63,52626.53,Employed_FT,69,645,2870,North West
+C00047,39,24007.56,Self_employed,42,692,2830,South West
+C00048,49,45092.39,Employed_FT,16,678,0,Yorkshire and The Humber
+C00049,43,48079.43,Employed_FT,117,618,13280,Scotland
+C00050,36,20701.07,Self_employed,156,700,1980,East of England
+C00051,29,42888.91,Employed_FT,50,631,3510,South East
+C00052,37,21797.97,Employed_FT,18,,1740,Yorkshire and The Humber
+C00053,40,28147.0,Employed_FT,29,641,0,Scotland
+C00054,32,20641.02,Employed_FT,41,582,21240,West Midlands
+C00055,43,31194.55,Employed_FT,74,556,5100,East Midlands
+C00056,63,37466.31,Employed_FT,28,653,9970,North West
+C00057,58,56315.49,Self_employed,140,751,0,Yorkshire and The Humber
+C00058,47,96897.33,Employed_FT,108,775,32020,North West
+C00059,52,64942.66,Employed_FT,20,596,32190,South East
+C00060,33,29341.87,Employed_FT,67,565,44010,West Midlands
+C00061,51,30810.19,Self_employed,126,722,4510,South West
+C00062,48,47782.61,Employed_FT,79,630,19100,London
+C00063,42,60670.81,Self_employed,82,693,30700,North West
+C00064,50,40974.68,Self_employed,21,701,0,South East
+C00065,27,25152.05,Employed_FT,81,576,11550,London
+C00066,72,18894.36,Retired,0,737,2030,North West
+C00067,44,36531.03,Self_employed,123,642,0,North East
+C00068,33,30123.17,Employed_FT,6,585,0,North East
+C00069,28,32152.7,Employed_FT,44,647,3640,Wales
+C00070,38,25021.18,Employed_FT,99,661,0,London
+C00071,21,16450.33,Employed_FT,36,568,0,North East
+C00072,41,27343.13,Employed_FT,53,621,2030,East of England
+C00073,56,34919.83,Employed_FT,50,609,3650,West Midlands
+C00074,43,18719.85,Employed_FT,69,598,4140,North East
+C00075,34,28108.23,Employed_PT,83,616,8960,London
+C00076,39,20912.63,Employed_FT,26,621,4560,South East
+C00077,38,17990.93,Employed_FT,53,699,2240,London
+C00078,42,41050.04,Employed_FT,50,603,4330,South East
+C00079,49,57850.58,Employed_FT,109,561,0,South West
+C00080,42,38190.97,Employed_PT,79,588,19220,West Midlands
+C00081,47,50153.35,Employed_FT,29,631,10240,Yorkshire and The Humber
+C00082,32,17012.07,Employed_FT,118,627,9610,South West
+C00083,61,28482.4,Employed_FT,10,707,10380,London
+C00084,61,31704.2,Employed_FT,44,518,0,West Midlands
+C00085,39,18725.54,Employed_PT,13,539,1060,South East
+C00086,34,15374.18,Employed_PT,40,592,0,London
+C00087,29,16801.21,Employed_PT,93,584,7560,South East
+C00088,55,42562.18,Employed_FT,140,573,3620,Scotland
+C00089,39,24226.66,Employed_FT,102,636,360,Scotland
+C00090,33,41395.04,Employed_FT,163,680,2800,West Midlands
+C00091,37,45725.29,Employed_FT,218,563,17250,Wales
+C00092,42,37804.96,Employed_FT,70,707,0,Yorkshire and The Humber
+C00093,25,43643.72,Employed_FT,38,551,16160,East of England
+C00094,48,32665.48,Employed_FT,94,652,5100,North West
+C00095,37,14506.21,Employed_PT,167,662,700,London
+C00096,56,40593.23,Self_employed,54,661,17280,South West
+C00097,61,14266.39,Self_employed,36,,1390,South East
+C00098,56,16470.47,Employed_PT,31,640,16820,London
+C00099,46,23569.29,Employed_PT,38,,2070,South West
+C00100,39,20731.01,Employed_FT,252,646,7570,South East

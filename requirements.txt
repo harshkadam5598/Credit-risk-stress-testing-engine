@@ -1,0 +1,8 @@
+# Runtime dependencies, pinned to the versions used to develop and verify the project.
+# Python 3.11 or later is required (tomllib); verified on Python 3.12.3.
+# Challenger (gradient boosting) results depend on the scikit-learn version, so the pins matter.
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.10.8

@@ -1,0 +1,57 @@
+check_id,group,check,status,value,expected,detail
+S01,schema,customer_data columns match specification,PASS,8,8,
+S02,schema,loan_data columns match specification,PASS,10,10,
+S03,schema,numeric fields are numeric,PASS,0,0,
+R01,ranges,"age within [19, 75] and integer",PASS,0,0,10000 non-missing values checked
+R02,ranges,"annual_income within [12000.0, 150000.0]",PASS,0,0,10000 non-missing values checked
+R03,ranges,employment_status only takes allowed values,PASS,0,0,allowed: 4 categories
+R04,ranges,"employment_tenure_months within [0, 480] and integer",PASS,0,0,9820 non-missing values checked
+R05,ranges,"credit_score within [300, 900] and integer",PASS,0,0,9849 non-missing values checked
+R06,ranges,"existing_debt within [0, inf] and integer",PASS,0,0,10000 non-missing values checked
+R07,ranges,region only takes allowed values,PASS,0,0,allowed: 12 categories
+R08,ranges,"loan_amount within [1000.0, 35000.0] and integer",PASS,0,0,15000 non-missing values checked
+R09,ranges,term_months only takes allowed values,PASS,0,0,allowed: 4 categories
+R10,ranges,"interest_rate within [3.9, 29.9]",PASS,0,0,15000 non-missing values checked
+R11,ranges,loan_purpose only takes allowed values,PASS,0,0,allowed: 5 categories
+R12,ranges,default_status only takes allowed values,PASS,0,0,allowed: 2 categories
+R13,ranges,loan_amount is a multiple of 100,PASS,0,0,
+R14,ranges,existing_debt is a multiple of 10,PASS,0,0,
+M01,missingness,customer fields other than credit_score and tenure have no missing values,PASS,none,none,
+M02,missingness,credit_score missing rate near configured value,PASS,1.5100%,1.50% +/- 0.5%,
+M03,missingness,tenure missing rate (non-retired) near configured value,PASS,1.8823%,2.00% +/- 0.5%,
+M04,missingness,Retired customers never have missing tenure (coded 0),PASS,0,0,
+M05,missingness,loan fields other than default_date have no missing values,PASS,none,none,
+K01,keys,customer_id is unique,PASS,0,0,
+K02,keys,loan_id is unique,PASS,0,0,
+K03,keys,every loan links to an existing customer,PASS,0,0,
+K04,keys,every customer has at least one loan,PASS,0,0,
+K05,keys,loans-per-customer allocation is exact,PASS,"{1: 6000, 2: 3000, 3: 1000}","{1: 6000, 2: 3000, 3: 1000}",
+K06,keys,customer and loan totals as configured,PASS,10000 customers / 15000 loans,10000 customers / 15000 loans,
+C01,chronology,origination_date parses as a valid date,PASS,0,0,
+C02,chronology,origination_date within the allowed window,PASS,0,0,2020-01-01 to 2023-11-30
+C03,chronology,scheduled end date is on or after 31 Dec 2024 (inclusive),PASS,0,0,
+C04,chronology,customer was at least 18 on the origination date (conservative rule),PASS,0,0,"origination_date >= T0 minus (age - 18) years, birthday unknown"
+C05,chronology,default_date present exactly when default_status = 1,PASS,0,0,
+C06,chronology,default_date inside the 12-month horizon,PASS,0,0,
+C07,chronology,default_date on or before the scheduled end date,PASS,0,0,
+L01,logic,loan_amount does not exceed annual income,PASS,0,0,
+L02,logic,0 < outstanding_balance < loan_amount,PASS,0,0,
+L03,logic,outstanding_balance matches month-by-month amortisation,PASS,0.0050,<= 0.01,max absolute gap in GBP
+L04,logic,Retired status only from age 60,PASS,0,0,
+L05,logic,Retired customers have tenure coded 0,PASS,0,0,
+L06,logic,tenure does not exceed working life (age - 18) x 12,PASS,0,0,
+T01,target,realised default rate within tolerance of the configured target,PASS,6.0800%,6.00% +/- 0.5%,"simulation assumption, not a market statistic"
+T02,target,default rate falls across credit-score quintiles,PASS,17.56%; 6.25%; 3.54%; 1.89%; 0.98%,Spearman <= -0.8 and lowest bin > highest bin,Spearman = -1.00
+T03,target,"default rate rises across debt-to-income bins (zero, then quartiles)",PASS,4.16%; 2.97%; 5.23%; 5.83%; 12.79%,Spearman >= 0.8 and highest bin > lowest bin,Spearman = 0.90
+T04,target,"both outcome classes occur in every region, purpose, term and employment group",PASS,none,none,
+A01,leakage,hidden audit columns are absent from customer_data and loan_data,PASS,none,none,
+A02,leakage,"audit file aligns with loans and true PDs lie strictly in (0, 1)",PASS,"aligned=True, in_range=True","True, True",
+O01,oracle,"oracle AUC (true PD vs simulated outcomes), full portfolio",REVIEW,0.8667,diagnostic band 0.65-0.85,OUTSIDE the band: investigate and report; no automatic parameter change
+O02,oracle,standard deviation of the true log-odds,INFO,1.5243,design estimate 1.0-1.2,
+O03,oracle,share of log-odds variance from hidden effects,INFO,0.1432,design estimate about a quarter,
+O04,oracle,correlation of observed credit_score with the hidden customer effect,INFO,-0.4956,design: negative,
+O05,oracle,mean true PD versus realised default rate,INFO,6.0000% vs 6.0800%,equal in expectation by construction,
+P01,processed,"joined table has the loan and customer columns only (no derived features, no split, no audit columns)",PASS,17,17,
+P02,processed,joined table has one row per loan,PASS,15000,15000,
+O06,oracle,"oracle AUC (true PD vs simulated outcomes), held-out test split",REVIEW,0.8885,diagnostic band 0.65-0.85,same accepted deviation as O01; a fitted model should not be expected to match it
+X01,reproducibility,regeneration with the same seed gives byte-identical files,PASS,identical,identical,compared by SHA-256
